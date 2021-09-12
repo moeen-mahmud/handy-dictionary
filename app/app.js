@@ -1,7 +1,13 @@
-// const API = `https://api.dictionaryapi.dev/api/v2/entries/en/hello`;
+/**
+ * Global Variables
+ */
 const searchField = document.getElementById("search-field");
 const suggestions = document.getElementById("suggestions");
 
+/**
+ * Functiion that trigger the events
+ * @returns response
+ */
 const triggerEvent = async () => {
   suggestions.textContent = "";
   const searchText = searchField.value;
@@ -19,6 +25,10 @@ const triggerEvent = async () => {
   }
 };
 
+/**
+ * Function for displaying the result
+ * @param {Object} data
+ */
 const displaySuggestion = (data) => {
   if (data.length !== -1 && Array.isArray(data)) {
     data.forEach((w) => {
@@ -41,5 +51,8 @@ const displaySuggestion = (data) => {
   }
 };
 
+/**
+ * Event handlers
+ */
 searchField.addEventListener("change", triggerEvent);
 searchField.addEventListener("keyup", triggerEvent);
