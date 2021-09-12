@@ -20,7 +20,7 @@
 body {
   font-family: "Urbanist", sans-serif;
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--neutral-color);
   text-align: center;
 }
 
@@ -32,7 +32,7 @@ body {
 
 h1 {
   font-size: 4rem;
-  font-family: "Abril Fatface", cursive;
+  font-family: "Lora", serif;
   margin: 1rem 0;
   line-height: 1.5;
 }
@@ -59,7 +59,8 @@ input {
 }
 
 .suggestions h2 {
-  font-family: "Lora", serif;
+  letter-spacing: 3px;
+  font-family: "Abril Fatface", cursive;
   font-size: 2rem;
   margin-bottom: 10px;
 }
