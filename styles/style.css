@@ -15,15 +15,19 @@
   margin: 0;
   padding: 0;
   font-size: 15px;
-  font-family: "Urbanist", sans-serif;
-  background-color: var(--neutral-color);
-  color: var(--text-color);
 }
 
 body {
-  display: grid;
-  place-items: center;
+  font-family: "Urbanist", sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
 }
 
 h1 {
@@ -36,6 +40,59 @@ h1 {
 input {
   min-width: 80%;
   padding: 1rem;
-  text-align: center;
   font-size: 1.1rem;
+}
+
+.result {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.suggestions {
+  margin-top: 10px;
+  padding: 1rem;
+  text-align: left;
+  min-width: 50%;
+  background-color: var(--neutral-color);
+  color: var(--text-color);
+  border-radius: 10px;
+}
+
+.suggestions h2 {
+  font-family: "Lora", serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.suggestions small {
+  color: var(--warning-color);
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.suggestions p {
+  margin-top: 10px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.suggestions p > span {
+  padding: 2px;
+  background-color: var(--text-color);
+  color: var(--neutral-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+
+.suggestions p:nth-child(even) {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 5px;
+  color: var(--text-color);
+  background-color: var(--succes-color);
+  font-style: italic;
+  font-weight: bolder;
+  border-radius: 5px;
 }
