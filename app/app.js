@@ -4,15 +4,19 @@ const suggestions = document.getElementById("suggestions");
 
 const triggerEvent = async () => {
   suggestions.textContent = "";
-  // const searchField = document.getElementById("search-field");
   const searchText = searchField.value;
   if (searchText === "") {
     return;
+  } else {
+    const API = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchText}`;
+    try {
+      const res = await fetch(API);
+      const data = await res.json();
+      displaySuggestion(data);
+    } catch (err) {
+      console.log(err);
+    }
   }
-  const API = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchText}`;
-  const res = await fetch(API);
-  const data = await res.json();
-  displaySuggestion(data);
 };
 
 const displaySuggestion = (data) => {
@@ -33,7 +37,6 @@ const displaySuggestion = (data) => {
     `;
       div.classList.add("suggestions");
       suggestions.appendChild(div);
-      console.log(phonetics);
     });
   }
 };
