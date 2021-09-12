@@ -1,0 +1,41 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lora:wght@600&family=Urbanist&display=swap");
+
+/* Colors */
+:root {
+  --text-color: #232832;
+  --primary-color: #874fee;
+  --warning-color: #e7576f;
+  --succes-color: #4fe48f;
+  --neutral-color: #fefeff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Urbanist", sans-serif;
+  background-color: var(--neutral-color);
+  color: var(--text-color);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: "Abril Fatface", cursive;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+input {
+  min-width: 80%;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
